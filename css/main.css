@@ -132,29 +132,46 @@ section{
     top: 70px;
 }
 table{
-
-    border-collapse: separate;
-    
-
+    width: 700px;
+    counter-reset: contador;
+    position: relative;
+    top: 50px
 }
 tr {
     width: 50px;
-    
+}
+tr::after{
+    content: counter(contador);
+    display: none;
 }
 td {
-    box-shadow: black;
     width: 50%;
-    border: solid 1px #000;
+    height: 50%;
+    counter-increment: contador;
+    position: relative;
     
 }
-td:hover{
-    background:rgb(71, 71, 71);
-    box-shadow:inset -15px 5 5 darken(rgb(70, 70, 70),50);
+
+.tabela tr td a h1::after{
+    content: "Comprar Número " counter(contador);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    right: 25%;
+    top: 30%;
+    display: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
-.itens:hover::after{
-    width: 100%;
-    background-color: #c26769;
+.tabela tr td:hover{
+    background:rgb(53, 53, 53);
+    box-shadow:inset -1px 0 0 darken(#442d0a,10);
 }
+.tabela tr td a h1:hover::after{
+    display: inline;
+}
+
+
 h1
  {
     padding: 10px;
@@ -169,18 +186,12 @@ h2 {
     padding-right: 15px;
     position: relative;
     color: black;
-    font-family: 'Piazzolla', serif;
+    font-family: 'Cedarville Cursive', cursive;
     font-size: 12px;
     text-align: right;
 }
-.itens::after{
-    content: "Comprar";
-}
-#frases {
-    width: 600px;  
-    position: absolute;
-    top: 10%;
-}
+
+
 
 section:nth-child(2){
     background-image: url('../img/bg.png');
@@ -192,7 +203,7 @@ section:nth-child(4){
     background-image: url('../img/bg3.png');
 }
 section:nth-child(5){
-   height: 500%; 
+   height: 600%; 
     background-image: url('../img/bg4.png');
     background-position: center;
     background-size: cover;
