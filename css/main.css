@@ -124,26 +124,76 @@ section{
     right: 15px;
     bottom: 15px;
 }
-section h2{
-    text-transform: uppercase;
-    font-size: 3.25rem;
-    font-weight: 900;
-    padding: 0.5em 1em;
-    color: #1d1e22;
-    background-color: #684b21;
-    mix-blend-mode: screen;
-    border-radius: 0.25em;
-    pointer-events: none;
-    user-select: none;
+#frase4{
+    top: 220px;
+}
+#dir4{
+    right: 15px;
+    top: 70px;
+}
+table{
 
+    border-collapse: separate;
+    
+
+}
+tr {
+    width: 50px;
+    
+}
+td {
+    box-shadow: black;
+    width: 50%;
+    border: solid 1px #000;
+    
+}
+td:hover{
+    background:rgb(71, 71, 71);
+    box-shadow:inset -15px 5 5 darken(rgb(70, 70, 70),50);
+}
+.itens:hover::after{
+    width: 100%;
+    background-color: #c26769;
+}
+h1
+ {
+    padding: 10px;
+    padding-bottom: 0px;
+    font-family: 'Piazzolla', serif;
+    font-size: 12px;
+    color: black;
+    text-align: left;
+}
+
+h2 {
+    padding-right: 15px;
+    position: relative;
+    color: black;
+    font-family: 'Piazzolla', serif;
+    font-size: 12px;
+    text-align: right;
+}
+.itens::after{
+    content: "Comprar";
+}
+#frases {
+    width: 600px;  
+    position: absolute;
+    top: 10%;
 }
 
 section:nth-child(2){
-    background-image: url('../img/bg2.png');
+    background-image: url('../img/bg.png');
 }
 section:nth-child(3){
-    background-image: url('../img/bg3.png');
+    background-image: url('../img/bg2.png');
 }
 section:nth-child(4){
+    background-image: url('../img/bg3.png');
+}
+section:nth-child(5){
+   height: 500%; 
     background-image: url('../img/bg4.png');
+    background-position: center;
+    background-size: cover;
 }
